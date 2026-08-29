@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.github.kiroterm.kiro-cli-terminal</id>
+    <name>Kiro CLI Terminal</name>
+    <version>0.1.2</version>
+    <vendor>kiroterm</vendor>
+
+    <description><![CDATA[
+    kiro-cli 工具窗：开启/恢复 chat 会话、注入 [路径]、图片粘贴；支持 Shift+Enter 换行、继承用户 shell 环境（含 EDITOR/VISUAL）、URL 纯文本展示与 Shift 扩选。工具栏在窗口底部。
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.terminal</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="com.github.kiroterm.agent"
+            anchor="bottom"
+            factoryClass="com.github.kiroterm.KiroTerminalToolWindowFactory"
+            icon="/icons/kiro.svg" />
+    </extensions>
+</idea-plugin>

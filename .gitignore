@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+bin/
+
+# IntelliJ Platform plugin dev (downloaded IDE artifacts)
+.intellijPlatform/
+
+# IDE
+.idea/
+.cursor/
+.kotlin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & local overrides
+*.log
+*.local
