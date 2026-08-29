@@ -1,6 +1,7 @@
 package com.github.kiroterm
 
 import com.github.kiroterm.feature.ImagePasteFeature
+import com.github.kiroterm.feature.EscapeToPtyFeature
 import com.github.kiroterm.feature.PathInjectFeature
 import com.github.kiroterm.feature.SessionFeature
 import com.github.kiroterm.feature.TerminalInteractionFeature
@@ -30,6 +31,7 @@ class KiroCliTerminalController(
 ) {
     private val session = SessionFeature(project, content, panel, projectDir)
     private val imagePaste = ImagePasteFeature()
+    private val escapeToPty = EscapeToPtyFeature()
     private val keyMaps = TerminalKeyMapFeature()
     private val placeholder = JLabel("正在自动开启 kiro-cli 会话…")
 
@@ -59,6 +61,7 @@ class KiroCliTerminalController(
     private fun onSessionReady(access: TerminalAccess) {
         val disposable = session.sessionDisposable() ?: return
         imagePaste.install(access, disposable)
+        escapeToPty.install(access, disposable)
         keyMaps.install(
             access,
             disposable,

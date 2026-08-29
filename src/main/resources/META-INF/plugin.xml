@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.kiroterm.kiro-cli-terminal</id>
     <name>Kiro CLI Terminal</name>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <vendor>kiroterm</vendor>
 
     <description><![CDATA[
